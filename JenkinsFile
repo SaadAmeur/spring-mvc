@@ -1,0 +1,13 @@
+pipeline {
+	agent any
+	stage(‘Build’){
+		step{
+		 sh ‘/home/saad/Documents/apache-maven-3.6.0/bin/mvn clean install' 
+		}
+	}
+	stage(’Test’){
+		step{
+		sh ‘/home/saad/Documents/apache-maven-3.6.0/bin/mvn test'
+		}
+	}
+}
