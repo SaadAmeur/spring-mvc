@@ -1,13 +1,13 @@
 pipeline {
-	agent quelconque
-	    étapes{
+	agent any
+	    stages{
 		stage ('Build') {
-			pas{
+		  	steps{
 			 sh '/home/saad/Documents/apache-maven-3.6.0/bin/mvn installation propre' 
 			}
 		}
 		stage ('Test') {
-			pas{
+			steps{
 			sh '/home/saad/Documents/apache-maven-3.6.0/bin/mvn test'
 			}
 		}
